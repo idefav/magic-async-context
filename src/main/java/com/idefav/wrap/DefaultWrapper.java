@@ -1,4 +1,4 @@
-package com.idefav.theadpool;
+package com.idefav.wrap;
 
 /**
  * the DefaultWrapper description.

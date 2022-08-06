@@ -1,4 +1,4 @@
-package com.idefav.theadpool;
+package com.idefav.wrap;
 
 import java.util.Collection;
 import java.util.List;

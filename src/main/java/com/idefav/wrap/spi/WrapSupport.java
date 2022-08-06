@@ -1,4 +1,4 @@
-package com.idefav.theadpool.spi;
+package com.idefav.wrap.spi;
 
 import java.util.concurrent.Callable;
 

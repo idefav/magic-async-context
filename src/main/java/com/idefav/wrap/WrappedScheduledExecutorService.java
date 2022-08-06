@@ -1,4 +1,4 @@
-package com.idefav.theadpool;
+package com.idefav.wrap;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;

@@ -1,7 +1,7 @@
-package com.idefav.theadpool;
+package com.idefav.wrap;
 
-import com.idefav.theadpool.spi.SpiHelper;
-import com.idefav.theadpool.spi.WrapSupport;
+import com.idefav.wrap.spi.SpiHelper;
+import com.idefav.wrap.spi.WrapSupport;
 
 import java.util.List;
 import java.util.concurrent.Callable;

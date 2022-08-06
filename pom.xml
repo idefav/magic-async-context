@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.idefav</groupId>
-    <artifactId>magic-thread-pool</artifactId>
+    <artifactId>magic-async-context</artifactId>
     <version>${revision}</version>
-    <name>magic-thread-pool</name>
-    <description>A magical Java thread pool that supports context transfer between threads or thread pools.
+    <name>magic-async-context</name>
+    <description>A magical Java async context that supports context transfer between threads or thread pools.
     </description>
 
     <properties>
@@ -16,7 +16,10 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>1.8</java.version>
-        <slf4j.version>1.7.32</slf4j.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <servlet.version>3.1.0</servlet.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
     </properties>
     <dependencies>
         <dependency>
@@ -24,6 +27,25 @@
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

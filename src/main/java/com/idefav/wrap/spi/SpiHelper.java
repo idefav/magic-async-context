@@ -1,4 +1,4 @@
-package com.idefav.theadpool.spi;
+package com.idefav.wrap.spi;
 
 import com.idefav.utils.AssertUtil;
 import org.slf4j.Logger;
