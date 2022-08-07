@@ -11,7 +11,7 @@ A magical Java thread pool that supports context transfer between threads or thr
 The child thread merges the main thread context in the middle, the main thread context attribute will be automatically overwritten to the child thread, and the child thread context will be restored after the attach ends.
 
 ## Quick Start
-1. 引入依赖
+1. Import dependencies
 ```xml
 <dependency>
   <groupId>com.idefav</groupId>
@@ -19,7 +19,28 @@ The child thread merges the main thread context in the middle, the main thread c
   <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
-2. 使用方式
+2. Usage
+
+* Context
+```java
+// Set value in Context
+Context.current().put("name", name);
+
+// Get the value from the Context, you can get the value in the child thread
+Context.current().get("name")
+```
+
+* RequestContext
+```java
+// First get the Context from the ServletContext and set it to the Context
+RequestHolder.set((HttpServletRequest) request)
+
+// Get RequestURI
+RequestHolder.get().getRequestURI()
+```
+
+* Demo
+
 ```java
     @GetMapping("/say/{name}")
     public String say(@PathVariable("name") String name) throws InterruptedException {
