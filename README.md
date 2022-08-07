@@ -57,3 +57,13 @@ RequestHolder.get().getRequestURI()
                 .getRequestURI());
     }
 ```
+
+3. Spring Boot Starter
+```xml
+<dependency>
+    <groupId>com.idefav</groupId>
+    <artifactId>magic-async-context-spring-boot-starter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency> 
+```
+Using Spring Boot Starter will automatically integrate RequestContext by default, you can directly use `RequestHolder.get().getRequestURI` to get request information
