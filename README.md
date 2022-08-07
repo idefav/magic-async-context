@@ -16,7 +16,7 @@ The child thread merges the main thread context in the middle, the main thread c
 <dependency>
   <groupId>com.idefav</groupId>
   <artifactId>magic-async-context</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 2. Usage
@@ -63,7 +63,7 @@ RequestHolder.get().getRequestURI()
 <dependency>
     <groupId>com.idefav</groupId>
     <artifactId>magic-async-context-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency> 
 ```
 Using Spring Boot Starter will automatically integrate RequestContext by default, you can directly use `RequestHolder.get().getRequestURI` to get request information
