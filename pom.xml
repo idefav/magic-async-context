@@ -3,6 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
     <groupId>com.idefav</groupId>
     <artifactId>magic-async-context</artifactId>
@@ -10,7 +15,18 @@
     <name>magic-async-context</name>
     <description>A magical Java async context that supports context transfer between threads or thread pools.
     </description>
-
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>idefav</name>
+            <email>wzs2009_hi@126.com</email>
+        </developer>
+    </developers>
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <maven.compiler.source>8</maven.compiler.source>
