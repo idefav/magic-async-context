@@ -2,7 +2,7 @@
 A magical Java thread pool that supports context transfer between threads or thread pools
 
 ## Feature
-1. Support for `Runable`,`Callerable` and thread pool wrappers
+1. Support for `Runable`,`Callable` and thread pool wrappers
 2. Asynchronous thread context passing
 3. Support integration with other contexts or ThreadLocal
 
