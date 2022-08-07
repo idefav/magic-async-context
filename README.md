@@ -2,9 +2,9 @@
 A magical Java thread pool that supports context transfer between threads or thread pools
 
 ## feature
-1. 支持 `Runable`/ `Callerable`和线程池包装
-2. 异步上下文传递
+1. Support for `Runable`,`Callerable` and thread pool wrappers
+2. Asynchronous thread context passing
 
-## 主线程和子线程上下文合并逻辑
+## Main thread and child thread context merge logic
 ![image](https://user-images.githubusercontent.com/6405415/183284071-e1188304-dcfd-4ec9-bb09-d231d030ac80.png)
-子线程中途合并主线程上下文, 主线程上下文会属性会自动覆盖到子线程, 在attach结束之后, 恢复子线程上下文
+The child thread merges the main thread context in the middle, the main thread context attribute will be automatically overwritten to the child thread, and the child thread context will be restored after the attach ends.
