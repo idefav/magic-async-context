@@ -16,7 +16,7 @@ The child thread merges the main thread context in the middle, the main thread c
 <dependency>
   <groupId>com.idefav</groupId>
   <artifactId>magic-async-context</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 2. Usage
