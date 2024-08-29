@@ -9,36 +9,38 @@ import java.util.concurrent.Callable;
  * @author wuzishu
  */
 public interface Context extends Map<String, Object> {
-    static Context current() {
-        return ContextStorage.defaultStorage().current();
-    }
+	static Context current() {
+		return ContextStorage.defaultStorage().current();
+	}
 
-    static void reset() {
-        ContextStorage.defaultStorage().reset();
-    }
+	static void reset() {
+		ContextStorage.defaultStorage().reset();
+	}
 
-    default Scope makeCurrent() {
-        return ContextStorage.defaultStorage().attach(this);
-    }
+	default Scope makeCurrent() {
+		return ContextStorage.defaultStorage().attach(this);
+	}
 
-    Context clone();
+	Context clone();
 
-    Context merge(Context target);
+	Context merge(Context target);
 
-    default Runnable wrap(Runnable runnable) {
-        return () -> {
-            try (Scope ignored = makeCurrent()) {
-                runnable.run();
-            }
+	default Runnable wrap(Runnable runnable) {
+		Context current = current().clone();
+		return () -> {
+			try (Scope ignored = ContextStorage.defaultStorage().attach(current)) {
+				runnable.run();
+			}
 
-        };
-    }
+		};
+	}
 
-    default <V> Callable<V> wrap(Callable<V> callable) {
-        return () -> {
-            try (Scope ignored = makeCurrent()) {
-                return callable.call();
-            }
-        };
-    }
+	default <V> Callable<V> wrap(Callable<V> callable) {
+		Context current = current().clone();
+		return () -> {
+			try (Scope ignored = ContextStorage.defaultStorage().attach(current)) {
+				return callable.call();
+			}
+		};
+	}
 }
